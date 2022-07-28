@@ -10,6 +10,8 @@ const githubReducer = (state, action) => {
       ...state,
       loading: true,
     };
+  } else if (action.type === "CLEAR_USERS") {
+    return { ...state, users: [] };
   }
 
   return state;
