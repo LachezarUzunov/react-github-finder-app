@@ -18,6 +18,12 @@ const githubReducer = (state, action) => {
       user: action.payload,
       loading: false,
     };
+  } else if (action.type === "GET_REPOS") {
+    return {
+      ...state,
+      repos: action.payload,
+      loading: false,
+    };
   }
 
   return state;
